@@ -9,7 +9,7 @@ tpoints = arange(sta,en,h)
 apoints = []
 y = 0#a(sta)
 for x in tpoints:
-    y=x**(1.5) 
+    y=x**(2/3) 
     apoints.append(y)
 plt.title("Intergration of Friedmann Function") 
 plt.xlabel("t") 
