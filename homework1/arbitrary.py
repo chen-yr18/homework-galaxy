@@ -12,7 +12,7 @@ def lam(a,adot,t):
     return 1
 
 def F(a, adot, t):
-    return math.sqrt((a**2)*8*math.pi*6.754*((10)**(-11))*rho(0,0,0)/3+k(0,0,0)+lam(0,0,0)*a*a/3)
+    return math.sqrt((a**2)*8*math.pi*6.754*((10)**(-11))*rho(a,adot,t)/3+k(a,adot,t)+lam(a,adot,t)*a*a/3)
 
 sta = 0 #starting time
 en = 5 #ending time
