@@ -1,29 +1,19 @@
 import math
 from numpy import arange
 from matplotlib import pyplot as plt 
-
-def rho(a,adot,t):
-    return 1 
-
-def k(a,adot,t):
-    return 1
-
-def lam(a,adot,t):
-    return 1
-
 def F(a, adot, t):
-    return math.sqrt((a**2)*8*math.pi*6.754*((10)**(-11))*rho(a,adot,t)/3-k(a,adot,t)+lam(a,adot,t)*a*a/3)
+    return math.sqrt(1.5*0.0001/(a**2)+1/a)*67.66*365*24*60*60/(3.26*9.46*((10)**(12)))
 
 sta = 0 #starting time
-en = 5 #ending time
-N =5000 #step number
+en = 2*((10)**(1)) #ending time
+N =50000#step number
 h = (en-sta)/N
 
 tpoints = arange(sta,en,h) 
 apoints = []
 adotpoints = []
 
-y = 0#a(sta)
+y = 0.1#a(sta)
 u = 0#adot(sta)
 
 for x in tpoints: #Runge-Kutta
