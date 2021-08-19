@@ -1,4 +1,3 @@
-import math
 from numpy import arange
 from matplotlib import pyplot as plt
 sta = 0 #starting time
@@ -7,7 +6,6 @@ N =5000 #step number
 h = (en-sta)/N
 tpoints = arange(sta,en,h) 
 apoints = []
-y = 0#a(sta)
 for x in tpoints:
     y=x**(2/3) 
     apoints.append(y)

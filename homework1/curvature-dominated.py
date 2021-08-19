@@ -8,7 +8,7 @@ h = (en-sta)/N
 tpoints = arange(sta,en,h) 
 apoints = []
 for x in tpoints:
-    y=x**(1/2) 
+    y=x
     apoints.append(y)
 plt.title("Intergration of Friedmann Function") 
 plt.xlabel("t") 
