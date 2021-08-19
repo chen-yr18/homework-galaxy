@@ -12,7 +12,7 @@ def lam(a,t):
     return 0
 
 def F(a,t):
-    return math.sqrt((a**2)*8*math.pi*6.754*((10)**(-11))*rho(a,t)/3-k(a,t)+lam(a,t)*a*a/3)
+    return math.sqrt((a**2)*8*math.pi*6.754*((10)**(-11))*rho(a,t)/3-k(a,t)+lam(a,t)*a*a/3) #Friedmann Function
 
 sta = 0 #starting time
 en = 5 #ending time
@@ -22,9 +22,7 @@ h = (en-sta)/N
 tpoints = arange(sta,en,h) 
 apoints = []
 
-
 y = 0.001#a(sta)
-
 
 for x in tpoints: #Runge-Kutta
     apoints.append(y)
@@ -38,7 +36,7 @@ for x in tpoints: #Runge-Kutta
     k4 = h*F(y+k3, x+h)
 
     y += (k1 + 2*k2 + 2*k3 + k4)/6
-    
+
 plt.title("Intergration of Friedmann Function") 
 plt.xlabel("t") 
 plt.ylabel("a") 

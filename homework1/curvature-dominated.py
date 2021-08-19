@@ -6,7 +6,7 @@ en = 5 #ending time
 N =5000 #step number
 h = (en-sta)/N
 tpoints = arange(sta,en,h) 
-apoints = []
+apoints = [] 
 for x in tpoints:
     y=x
     apoints.append(y)
