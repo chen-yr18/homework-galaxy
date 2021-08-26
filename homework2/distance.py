@@ -5,9 +5,9 @@ from scipy import integrate
 c=1
 H0=1
 Omega_r0=0
-Omega_m0=1
+Omega_m0=0.27
 Omega_k0=0
-Omega_lam0=0
+Omega_lam0=0.73
 k=0
 def DL(z,x,k):
     return (1+z)*fk(x,k)
@@ -39,7 +39,7 @@ def x(z):
     
 
 sta = 0 #starting time
-en = 5 #ending time
+en = 2 #ending time
 N =100 #step number
 h = (en-sta)/N
 zpoints = arange(sta,en,h) 
