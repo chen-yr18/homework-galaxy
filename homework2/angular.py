@@ -5,9 +5,9 @@ from scipy import integrate
 c=1 #speed of Light
 H0=1
 Omega_r0=0
-Omega_m0=1
+Omega_m0=0.27
 Omega_k0=0
-Omega_lam0=0
+Omega_lam0=0.73
 k=0
 def DL(z,x,k):
     return (1+z)*fk(x,k)
@@ -39,22 +39,19 @@ def x(z):
     
 
 sta = 0 #starting time
-en = 2 #ending time
+en = 5 #ending time
 N =100 #step number
 h = (en-sta)/N
 zpoints = arange(sta,en,h) 
-DLpoints=[]
 DApoints=[]
 for z1 in zpoints:
-    DLpoints.append(DL(z1,x(z1),k))
-    DApoints.append(DA(z1,x(z1),k))
+    DApoints.append(1/DA(z1,x(z1),k))
     
 
-plt.title("Angular Diameter Distance and Luminosity Distance for different Redshifts") 
+plt.title("Angular Diameter of an object for different Redshifts") 
 plt.xlabel("z") 
-plt.ylabel("distance") 
-plt.plot(zpoints, DLpoints ,label="Luminosity Distance")
-plt.plot(zpoints, DApoints ,label="Angular Diameter Distance")
+plt.ylabel("Angular Diametere") 
+plt.plot(zpoints, DApoints)
 plt.legend()
 plt.show()    
 
